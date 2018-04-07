@@ -16,12 +16,12 @@ db.collection("personnages").get().then((querySnapshot) => {
   });
 })
 }
-
+let init = '';
 db.collection("personnages").get().then((querySnapshot) => {
   querySnapshot.forEach((doc) => {
-     name = name + '<br> ' + doc.data().name;
-      document.getElementById("listPerso").innerHTML = `<p>${name}</p>`;
-      console.log(`${doc.data().name}`);
+    init = init + '<br> ' + doc.data().name;
+      document.getElementById("listPerso").innerHTML = `<p>${init}</p>`;
+      console.log(`${doc.data().init}`);
   });
 })
 
